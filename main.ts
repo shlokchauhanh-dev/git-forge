@@ -1,6 +1,7 @@
 // Boots the forge on an ephemeral port, tells the env where it is, and leaves
 // once the env says the trial is finished. Health checks are served as soon
 // as the socket is listening, which is before registration.
+// Registration is one POST of the bound port; a 409 means the env already has it.
 
 import { createApp } from './app.ts';
 
